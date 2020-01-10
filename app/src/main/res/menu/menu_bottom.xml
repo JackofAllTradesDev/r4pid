@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeMenu"
+        android:icon="@drawable/home_enabled"
+        android:title="HOME"
+        />
+    <item
+        android:id="@+id/ScanMenu"
+        android:icon="@drawable/group_2"
+        android:title="SCAN QR"
+        />
+    <item
+        android:id="@+id/mainMenu"
+        android:icon="@drawable/porcelain_logo"
+        android:title="PORCELAIN"
+        />
+    <item
+        android:id="@+id/profileMenu"
+        android:icon="@drawable/profile"
+        android:title="PROFILE"
+        />
+    <item
+        android:id="@+id/shopMenu"
+        android:icon="@drawable/shop"
+        android:title="SHOP"
+        />
+
+
+</menu>

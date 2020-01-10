@@ -40,6 +40,7 @@
                 android:lineSpacingExtra="2sp"
                 android:textColor="#ffffff"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 tools:text="+659771234567" />
 
             <EditText
@@ -70,26 +71,26 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="106dp"
                     android:layout_marginRight="106dp"
+                    android:layout_weight="1"
                     android:lineSpacingExtra="5sp"
                     android:textColor="#e9e9e9"
                     android:textSize="13sp"
-                    android:layout_weight="1"
 
                     />
 
                 <TextView
 
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="138dp"
                     android:layout_marginRight="138dp"
-                    android:gravity="center_horizontal"
+                    android:gravity="center"
                     android:lineSpacingExtra="15sp"
-                    android:text="Didn’t receive it?             Resend Code"
+                    android:paddingBottom="8dp"
+                    android:text="Didn’t receive it?\nResend Code"
                     android:textColor="#e9e9e9"
                     android:textSize="13sp"
-                    tools:text="Didn’t receive it?
-                Resend Code" />
+                     />
 
                 <TextView
                     android:id="@+id/timerCount"
@@ -102,6 +103,7 @@
                     android:text="Request new code in 04:59"
                     android:textColor="#e9e9e9"
                     android:textSize="13sp"
+                    android:paddingBottom="8dp"
                     tools:text="Request new code in 04:59" />
 
             </LinearLayout>

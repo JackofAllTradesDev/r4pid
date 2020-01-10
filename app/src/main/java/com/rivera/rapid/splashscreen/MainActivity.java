@@ -32,5 +32,6 @@ public class MainActivity extends AppCompatActivity implements SplashScreenPrese
     public void nextActivity() {
         Intent intent = new Intent(this, LoginActivity.class);
         this.startActivity ( intent );
+        finish();
     }
 }

@@ -5,14 +5,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.hbb20.CountryCodePicker;
 import com.rivera.rapid.R;
 import com.rivera.rapid.auth.AuthAcitivity;
+import com.rivera.rapid.dashboard.DashboardActivity;
 
 /**
  * Created by Jaymon on 01/10/2020.
@@ -21,22 +25,32 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
     CountryCodePicker ccp;
     private EditText cpNumber;
     private TextView continueLabel;
+    private LinearLayout bottomLayout;
     LoginPresenter loginPresenter;
+    Boolean labelChange = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ccp = (CountryCodePicker) findViewById(R.id.ccp);
         cpNumber = (EditText) findViewById(R.id.cpNumber);
-        continueLabel = (TextView) findViewById(R.id.continueLabel);
+        continueLabel = (TextView) findViewById(R.id.continueLbl);
+        bottomLayout = (LinearLayout) findViewById(R.id.btmLayout);
         loginPresenter = new LoginPresenter(this, getApplicationContext());
-        cpNumber.setOnTouchListener(new View.OnTouchListener() {
+        cpNumber.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                loginPresenter.showButton();
-                return false;
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+
+                    bottomLayout.setVisibility(View.VISIBLE);
+                    Log.e("Login", "check");
+                }else{
+                    bottomLayout.setVisibility(View.GONE);
+                    loginPresenter.showButton();
+                }
             }
         });
+
 
         continueLabel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,16 +63,19 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
     }
 
 
+
     @Override
     public void showContinue() {
         Log.e("ddsadsa", "dsadsa");
-        continueLabel.setVisibility(View.VISIBLE);
+
+        continueLabel.setText("Continue");
+
     }
 
     @Override
     public void nextActivity() {
-        Intent intent = new Intent(getBaseContext(), AuthAcitivity.class);
-        intent.putExtra("EXTRA_CPNUMBER", "+"+ccp.getFullNumberWithPlus()+cpNumber.getText().toString());
+        Intent intent = new Intent(getBaseContext(), DashboardActivity.class);
+//        intent.putExtra("EXTRA_CPNUMBER", "+"+ccp.getFullNumberWithPlus()+cpNumber.getText().toString());
         startActivity(intent);
     }
 }
