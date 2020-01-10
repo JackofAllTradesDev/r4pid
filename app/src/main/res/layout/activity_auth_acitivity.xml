@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/group_3"
+    tools:context=".auth.AuthAcitivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="166dp"
+                android:layout_marginEnd="137dp"
+                android:lineSpacingExtra="2sp"
+                android:text="Enter the 6-digit code sent to:"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                tools:text="Enter the 6-digit code sent to:" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="231dp"
+                android:lineSpacingExtra="2sp"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                tools:text="+659771234567" />
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/edit_text_layout"
+                android:ems="10"
+                android:hint="Enter Code"
+                android:inputType="number"
+                android:textAlignment="center"
+                tools:layout_editor_absoluteY="249dp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="106dp"
+                    android:layout_marginRight="106dp"
+                    android:lineSpacingExtra="5sp"
+                    android:textColor="#e9e9e9"
+                    android:textSize="13sp"
+                    android:layout_weight="1"
+
+                    />
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="138dp"
+                    android:layout_marginRight="138dp"
+                    android:gravity="center_horizontal"
+                    android:lineSpacingExtra="15sp"
+                    android:text="Didn’t receive it?             Resend Code"
+                    android:textColor="#e9e9e9"
+                    android:textSize="13sp"
+                    tools:text="Didn’t receive it?
+                Resend Code" />
+
+                <TextView
+                    android:id="@+id/timerCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="106dp"
+                    android:layout_marginRight="106dp"
+                    android:lineSpacingExtra="5sp"
+                    android:text="Request new code in 04:59"
+                    android:textColor="#e9e9e9"
+                    android:textSize="13sp"
+                    tools:text="Request new code in 04:59" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
