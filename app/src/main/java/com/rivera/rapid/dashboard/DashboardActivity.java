@@ -13,6 +13,35 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.rivera.rapid.R;
 
 public class DashboardActivity extends AppCompatActivity {
+
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+            switch (menuItem.getItemId()){
+                case R.id.homeMenu :
+                    InitializeFragment(homeFragment);
+                    return true;
+                case R.id.ScanMenu :
+                    InitializeFragment(scanFragment);
+                    return true;
+                case R.id.mainMenu :
+                    InitializeFragment(porceleinFragment);
+                    return true;
+                case R.id.profileMenu :
+                    InitializeFragment(profileFragment);
+                    return true;
+                case R.id.shopMenu :
+                    InitializeFragment(shopFragment);
+                    return true;
+                default:
+                    return false;
+
+            }
+
+        }
+    };
     BottomNavigationView bottomNavigationView;
     FrameLayout frameLayouts;
 
@@ -35,34 +64,13 @@ public class DashboardActivity extends AppCompatActivity {
         profileFragment = new ProfileFragment();
         shopFragment = new ShopFragment();
 
+        bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+        bottomNavigationView.getMenu().getItem(0).setChecked(true);
+        mOnNavigationItemSelectedListener.onNavigationItemSelected(bottomNavigationView.getMenu().getItem(0));
 
-                switch (menuItem.getItemId()){
-                    case R.id.homeMenu :
-                        InitializeFragment(homeFragment);
-                        return true;
-                    case R.id.ScanMenu :
-                        InitializeFragment(scanFragment);
-                        return true;
-                    case R.id.mainMenu :
-                        InitializeFragment(porceleinFragment);
-                        return true;
-                    case R.id.profileMenu :
-                        InitializeFragment(profileFragment);
-                        return true;
-                    case R.id.shopMenu :
-                        InitializeFragment(shopFragment);
-                        return true;
-                default:
-                    return false;
 
-                }
 
-            }
-        });
     }
 
     private void InitializeFragment(Fragment fragment){
@@ -70,5 +78,7 @@ public class DashboardActivity extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
         fragmentTransaction.replace(R.id.frameLayout, fragment);
         fragmentTransaction.commit();
+
+
     }
 }

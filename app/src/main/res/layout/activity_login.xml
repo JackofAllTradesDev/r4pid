@@ -140,7 +140,8 @@
 
                         android:background="@drawable/faceook_layout"
                         android:drawableLeft="@drawable/fb"
-                        android:text="Facebook" />
+                        android:text="Facebook"
+                        android:layout_marginRight="8dp"/>
 
                     <Button
                         android:id="@+id/button3"

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -26,6 +27,7 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
     private EditText cpNumber;
     private TextView continueLabel;
     private LinearLayout bottomLayout;
+    private Button google;
     LoginPresenter loginPresenter;
     Boolean labelChange = false;
     @Override
@@ -36,6 +38,7 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
         cpNumber = (EditText) findViewById(R.id.cpNumber);
         continueLabel = (TextView) findViewById(R.id.continueLbl);
         bottomLayout = (LinearLayout) findViewById(R.id.btmLayout);
+        google = (Button)findViewById(R.id.button3);
         loginPresenter = new LoginPresenter(this, getApplicationContext());
         cpNumber.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -58,6 +61,13 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
                 loginPresenter.next();
             }
         });
+        google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getBaseContext(), DashboardActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
@@ -74,8 +84,8 @@ public class LoginActivity extends AppCompatActivity implements LoginPresenter.V
 
     @Override
     public void nextActivity() {
-        Intent intent = new Intent(getBaseContext(), DashboardActivity.class);
-//        intent.putExtra("EXTRA_CPNUMBER", "+"+ccp.getFullNumberWithPlus()+cpNumber.getText().toString());
+        Intent intent = new Intent(getBaseContext(), AuthAcitivity.class);
+        intent.putExtra("EXTRA_CPNUMBER", "+"+ccp.getFullNumberWithPlus()+cpNumber.getText().toString());
         startActivity(intent);
     }
 }

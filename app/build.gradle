@@ -36,4 +36,9 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.7.1'
     implementation 'com.hbb20:ccp:2.3.5'
     implementation 'com.google.android.material:material:1.0.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.1.0'
+    implementation("com.squareup.okhttp3:logging-interceptor:4.3.1")
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.1.2'
+    implementation 'me.relex:circleindicator:2.1.4'
+
 }

@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rivera.rapid">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".dashboard.DashboardActivity"></activity>
+        <activity android:name=".chat.ChatActivity"></activity>
+        <activity android:name=".treatments.TreamentsActivity" />
+        <activity android:name=".products.ProductsActivity" />
+        <activity android:name=".notifications.NotificationActivity" />
+        <activity android:name=".appointments.AppointmentActivity" />
+        <activity android:name=".dashboard.DashboardActivity" />
         <activity android:name=".auth.AuthAcitivity" />
         <activity android:name=".login.LoginActivity" />
         <activity android:name=".splashscreen.MainActivity">
