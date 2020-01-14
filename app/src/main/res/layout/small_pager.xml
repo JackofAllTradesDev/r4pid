@@ -19,7 +19,8 @@
             android:layout_gravity="center"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:paddingLeft="8dp">
+            android:layout_marginLeft="31dp"
+            android:layout_marginRight="31dp">
 
             <ImageView
                 android:id="@+id/imageView4"
@@ -52,13 +53,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:paddingLeft="8dp">
+            android:paddingLeft="18dp"
+            android:layout_marginRight="18dp">
 
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="24dp"
                 android:layout_height="20dp"
-                app:srcCompat="@drawable/humidity" />
+                app:srcCompat="@drawable/orion_sunny_wind_gust" />
 
             <TextView
                 android:id="@+id/speedLbl"
@@ -84,14 +86,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="horizontal"
-            android:paddingRight="8dp"
-            android:paddingLeft="8dp">
+            android:layout_marginLeft="31dp"
+            android:layout_marginRight="36dp">
 
             <ImageView
                 android:id="@+id/imageView5"
                 android:layout_width="24dp"
                 android:layout_height="20dp"
-                app:srcCompat="@drawable/orion_sunny_wind_gust" />
+                app:srcCompat="@drawable/humidity" />
 
             <TextView
                 android:id="@+id/humidLbl"

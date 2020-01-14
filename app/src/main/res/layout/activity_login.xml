@@ -57,14 +57,14 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginTop="24dp">
 
                 <com.hbb20.CountryCodePicker
                     android:id="@+id/ccp"
                     android:layout_width="wrap_content"
                     android:layout_height="48dp"
                     android:layout_marginStart="25dp"
-                    android:layout_marginTop="16dp"
                     android:background="@drawable/edit_text_layout"
                     app:ccp_autoDetectCountry="true"
                     app:ccp_countryAutoDetectionPref="SIM_NETWORK_LOCALE">
@@ -73,17 +73,16 @@
 
                 <EditText
                     android:id="@+id/cpNumber"
-                    android:layout_width="238dp"
+                    android:layout_width="match_parent"
                     android:layout_height="48dp"
                     android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="64dp"
+                    android:layout_marginEnd="24dp"
                     android:background="@drawable/edit_text_layout"
                     android:ems="10"
                     android:hint="9XX XXX XXXX"
                     android:inputType="phone"
                     android:maxLength="10"
-                    android:paddingStart="4dp" />
+                    android:paddingStart="16dp" />
 
             </LinearLayout>
 
@@ -141,7 +140,7 @@
                         android:background="@drawable/faceook_layout"
                         android:drawableLeft="@drawable/fb"
                         android:text="Facebook"
-                        android:layout_marginRight="8dp"/>
+                        android:layout_marginRight="15dp"/>
 
                     <Button
                         android:id="@+id/button3"

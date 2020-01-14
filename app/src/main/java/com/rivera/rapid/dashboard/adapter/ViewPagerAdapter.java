@@ -71,7 +71,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         if(position < 1){
             linearLayout.setVisibility(View.VISIBLE);
         }else{
-            linearLayout.setVisibility(View.GONE);
+            linearLayout.setVisibility(View.INVISIBLE);
         }
         DecimalFormat df = new DecimalFormat("#.##");
         String com = df.format(transactionList.get(position).getMain().getTemp());

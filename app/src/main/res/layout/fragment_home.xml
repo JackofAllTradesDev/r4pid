@@ -61,7 +61,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="28dp"
@@ -72,7 +72,8 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="22dp"
             android:orientation="vertical">
 
             <ImageButton
@@ -89,14 +90,17 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Products"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="#595e60"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_marginRight="16dp">
 
             <ImageButton
                 android:id="@+id/imageButton3"
@@ -112,14 +116,16 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Treatments"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="#595e60"/>
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="24dp"
+            android:layout_marginEnd="21dp"
             android:orientation="vertical">
 
             <ImageButton
@@ -136,7 +142,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="Appointments"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textColor="#595e60"/>
 
         </LinearLayout>
     </LinearLayout>

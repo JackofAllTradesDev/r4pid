@@ -57,7 +57,7 @@
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="104dp"
                 android:background="#cca8aa"
                 android:paddingLeft="4dp"
                 android:paddingRight="4dp"

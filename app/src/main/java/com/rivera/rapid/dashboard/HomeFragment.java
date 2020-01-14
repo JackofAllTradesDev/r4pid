@@ -111,7 +111,7 @@ public class HomeFragment extends Fragment implements HomePresenter.View, Bridge
         ((AppCompatActivity)getActivity()).getSupportActionBar().setDisplayShowHomeEnabled(true);
         ((AppCompatActivity)getActivity()).getSupportActionBar().setIcon(R.drawable.location);
         setHasOptionsMenu(true);
-        getLocation();
+//        getLocation();
         setRecyclerView();
         news.setBackgroundResource(R.drawable.button_article);
         pro.setBackgroundResource(R.drawable.button_article_white);
